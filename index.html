@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DyronyxTech – Digital Growth & Automation. Social media strategy, Google review automation, website development and business automation for Indian businesses.">
+<meta name="keywords" content="digital marketing, social media growth, google review automation, website development, Aurangabad, Maharashtra">
+<meta name="author" content="Diksha Kore">
+<title>DyronyxTech – Digital Growth & Automation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Separated CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="mainNav">
+  <a class="nav-logo" onclick="goTo('home')">
+    <img src="" alt="DyronyxTech Logo" id="navLogo">
+    <span class="nav-logo-text">DYRONYXTECH</span>
+  </a>
+  <ul class="nav-links" id="desktopNav">
+    <li><a onclick="goTo('home')" id="nl-home" class="active">Home</a></li>
+    <li><a onclick="goTo('services')" id="nl-services">Services</a></li>
+    <li><a onclick="goTo('saas')" id="nl-saas">Product</a></li>
+    <li><a onclick="goTo('portfolio')" id="nl-portfolio">Portfolio</a></li>
+    <li><a onclick="goTo('pricing')" id="nl-pricing">Pricing</a></li>
+    <li><a onclick="goTo('about')" id="nl-about">About</a></li>
+    <li><a onclick="goTo('blog')" id="nl-blog">Blog</a></li>
+    <li><a onclick="goTo('contact')" id="nl-contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="goTo('contact')">Get Started</button>
+  <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')">☰</button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="document.getElementById('mobileNav').classList.remove('open')">✕</button>
+  <a onclick="mobileGo('home')">HOME</a>
+  <a onclick="mobileGo('services')">SERVICES</a>
+  <a onclick="mobileGo('saas')">PRODUCT</a>
+  <a onclick="mobileGo('portfolio')">PORTFOLIO</a>
+  <a onclick="mobileGo('pricing')">PRICING</a>
+  <a onclick="mobileGo('about')">ABOUT</a>
+  <a onclick="mobileGo('blog')">BLOG</a>
+  <a onclick="mobileGo('contact')">CONTACT</a>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toastIcon">✓</span>
+  <span class="toast-msg" id="toastMsg"></span>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-badge"><span class="pulse-dot"></span>&nbsp;India's #1 Digital Growth Partner</div>
+      <h1 class="hero-title">
+        Scale Your Business<br>
+        <span class="grad-text">Smarter. Faster.</span><br>
+        <span class="grad-text2">Automated.</span>
+      </h1>
+      <p class="hero-sub">DyronyxTech engineers automation systems, social media growth engines & web platforms that transform your online presence into measurable revenue.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="goTo('contact')">Get Started Free →</button>
+        <button class="btn-secondary" onclick="goTo('saas')">▶ See Our Platform</button>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hstat-num"><span class="counter" data-target="500">0</span>+</div><div class="hstat-label">Clients Helped</div></div>
+        <div><div class="hstat-num"><span class="counter" data-target="12000">0</span>+</div><div class="hstat-label">Reviews Generated</div></div>
+        <div><div class="hstat-num"><span class="counter" data-target="98">0</span>%</div><div class="hstat-label">Client Retention</div></div>
+      </div>
+    </div>
+
+    <!-- HERO DASHBOARD -->
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hcard-header">
+          <span class="hcard-title">REVIEW AUTOMATION PLATFORM</span>
+          <span class="live-badge"><span class="pulse-dot"></span> LIVE</span>
+        </div>
+        <div class="hcard-metrics">
+          <div class="hmetric"><div class="hmetric-val" style="color:var(--cyan)">4.9</div><div class="hmetric-lbl">AVG RATING</div></div>
+          <div class="hmetric"><div class="hmetric-val" style="color:var(--green)">247</div><div class="hmetric-lbl">REVIEWS</div></div>
+          <div class="hmetric"><div class="hmetric-val" style="color:var(--pink)">+34%</div><div class="hmetric-lbl">THIS MONTH</div></div>
+        </div>
+        <div class="hcard-chart">
+          <div class="hchart-lbl">REVIEW REQUESTS SENT — LAST 7 DAYS</div>
+          <div class="bars">
+            <div class="bar" style="height:40%;background:rgba(0,212,255,.3)"></div>
+            <div class="bar" style="height:58%;background:rgba(0,212,255,.4)"></div>
+            <div class="bar" style="height:47%;background:rgba(0,212,255,.35)"></div>
+            <div class="bar" style="height:72%;background:rgba(0,212,255,.5)"></div>
+            <div class="bar" style="height:62%;background:rgba(0,212,255,.45)"></div>
+            <div class="bar" style="height:88%;background:rgba(91,43,232,.6)"></div>
+            <div class="bar" style="height:97%;background:linear-gradient(to top,var(--blue),var(--cyan))"></div>
+          </div>
+        </div>
+        <div class="hcard-reviews">
+          <div class="rev-item"><div><div class="rev-name">Rahul M. — Pune</div><div class="rev-stars">★★★★★</div></div><span class="rev-status rev-sent">✓ SENT</span></div>
+          <div class="rev-item"><div><div class="rev-name">Priya S. — Mumbai</div><div class="rev-stars">★★★★★</div></div><span class="rev-status rev-sent">✓ SENT</span></div>
+          <div class="rev-item"><div><div class="rev-name">Arjun K. — Nashik</div><div class="rev-stars">★★★★☆</div></div><span class="rev-status rev-pending">⏳ PENDING</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLLING LOGOS -->
+  <div class="logos-bar">
+    <div class="logos-scroll" id="logosScroll">
+      <span class="logo-item">TECHNOVA</span>
+      <span class="logo-item">BRANDPULSE</span>
+      <span class="logo-item">GROWTHLAB</span>
+      <span class="logo-item">DIGITALEDGE</span>
+      <span class="logo-item">NEXAFLOW</span>
+      <span class="logo-item">VIRACORE</span>
+      <span class="logo-item">TECHBRIDGE</span>
+      <span class="logo-item">SPICEGARDEN</span>
+      <!-- duplicated for infinite scroll -->
+      <span class="logo-item">TECHNOVA</span>
+      <span class="logo-item">BRANDPULSE</span>
+      <span class="logo-item">GROWTHLAB</span>
+      <span class="logo-item">DIGITALEDGE</span>
+      <span class="logo-item">NEXAFLOW</span>
+      <span class="logo-item">VIRACORE</span>
+      <span class="logo-item">TECHBRIDGE</span>
+      <span class="logo-item">SPICEGARDEN</span>
+    </div>
+  </div>
+
+  <!-- SERVICES OVERVIEW -->
+  <section>
+    <div class="section-header reveal">
+      <div class="section-tag">CAPABILITIES</div>
+      <h2 class="section-title">Everything You Need to <span class="grad-text">Dominate Online</span></h2>
+      <p class="section-sub">From social media growth to intelligent automation — complete digital growth systems built for real results.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid">
+      <div class="service-card reveal" onclick="goTo('services')">
+        <div class="svc-icon" style="background:rgba(0,212,255,.1)">📱</div>
+        <h3>Social Media Growth</h3>
+        <p>Strategic content, engagement automation, and data-driven growth for Instagram, Facebook, and LinkedIn.</p>
+        <div class="svc-arrow">Explore →</div>
+      </div>
+      <div class="service-card reveal" onclick="goTo('saas')">
+        <div class="svc-icon" style="background:rgba(0,229,160,.1)">⭐</div>
+        <h3>Google Review Automation</h3>
+        <p>Our SaaS platform automates review requests, sends smart reminders, and manages your online reputation.</p>
+        <div class="svc-arrow">See Product →</div>
+      </div>
+      <div class="service-card reveal" onclick="goTo('services')">
+        <div class="svc-icon" style="background:rgba(91,43,232,.1)">🌐</div>
+        <h3>Website Development</h3>
+        <p>Modern, fast, SEO-optimized websites and web applications built with cutting-edge technology.</p>
+        <div class="svc-arrow">Learn More →</div>
+      </div>
+      <div class="service-card reveal" onclick="goTo('services')">
+        <div class="svc-icon" style="background:rgba(224,64,251,.1)">🚀</div>
+        <h3>Personal Brand Development</h3>
+        <p>Build a powerful personal brand on LinkedIn and Instagram that attracts opportunities and clients.</p>
+        <div class="svc-arrow">Get Started →</div>
+      </div>
+      <div class="service-card reveal" onclick="goTo('services')">
+        <div class="svc-icon" style="background:rgba(255,179,0,.1)">⚡</div>
+        <h3>Business Automation</h3>
+        <p>Custom automation workflows that save hours daily — CRM integrations, lead nurturing, smart notifications.</p>
+        <div class="svc-arrow">Learn More →</div>
+      </div>
+      <div class="service-card reveal" onclick="goTo('services')">
+        <div class="svc-icon" style="background:rgba(0,212,255,.07)">📊</div>
+        <h3>Online Presence Optimization</h3>
+        <p>Full audit and optimization of your digital footprint — SEO, GMB, social profiles, and content strategy.</p>
+        <div class="svc-arrow">Start Audit →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-item reveal"><div class="stat-num"><span class="counter" data-target="500">0</span>+</div><div class="stat-label">BUSINESSES HELPED</div></div>
+      <div class="stat-item reveal"><div class="stat-num"><span class="counter" data-target="12000">0</span>+</div><div class="stat-label">REVIEWS GENERATED</div></div>
+      <div class="stat-item reveal"><div class="stat-num"><span class="counter" data-target="98">0</span>%</div><div class="stat-label">CLIENT SATISFACTION</div></div>
+      <div class="stat-item reveal"><div class="stat-num"><span class="counter" data-target="3">0</span>x</div><div class="stat-label">AVG GROWTH RATE</div></div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="section-header center reveal">
+      <div class="section-tag">CLIENT SUCCESS</div>
+      <h2 class="section-title">Trusted By <span class="grad-text">Growing Businesses</span></h2>
+    </div>
+    <div class="testi-grid" id="testiGrid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"DyronyxTech transformed our Instagram from 800 to 15,000 followers in just 4 months. Their strategy is incredibly precise and the results speak for themselves."</p>
+        <div class="testi-author"><div class="testi-avatar" style="background:var(--grad1)">R</div><div><div class="testi-name">Rahul Deshmukh</div><div class="testi-role">Owner, Spice Garden Restaurant — Pune</div></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The Google Review automation is a game changer. We went from 12 reviews to 180+ in 6 weeks without lifting a finger. Our local ranking shot up dramatically."</p>
+        <div class="testi-author"><div class="testi-avatar" style="background:var(--grad2)">P</div><div><div class="testi-name">Priya Kulkarni</div><div class="testi-role">Director, Nexus Dental Clinic — Nashik</div></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The website Diksha's team built is stunning, fast, and already ranking on Google's first page. Their understanding of both design and SEO is exceptional."</p>
+        <div class="testi-author"><div class="testi-avatar" style="background:var(--grad3)">A</div><div><div class="testi-name">Amit Sharma</div><div class="testi-role">CEO, TechBridge Solutions — Mumbai</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section><div class="cta-banner reveal">
+    <h2>Ready to <span class="grad-text">Scale Your Business?</span></h2>
+    <p>Join 500+ businesses already growing with DyronyxTech. Start your free consultation today.</p>
+    <div class="cta-btns">
+      <button class="btn-primary" onclick="goTo('contact')">Book Free Consultation →</button>
+      <button class="btn-secondary" onclick="goTo('pricing')">View Pricing Plans</button>
+    </div>
+  </div></section>
+
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-item-icon">🔒</span>SECURE & CONFIDENTIAL</div>
+    <div class="trust-item"><span class="trust-item-icon">⚡</span>FAST RESULTS</div>
+    <div class="trust-item"><span class="trust-item-icon">🇮🇳</span>MADE IN INDIA</div>
+    <div class="trust-item"><span class="trust-item-icon">📊</span>DATA-DRIVEN</div>
+    <div class="trust-item"><span class="trust-item-icon">💬</span>24/7 SUPPORT</div>
+    <div class="trust-item"><span class="trust-item-icon">✅</span>NO LOCK-IN</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SERVICES PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">OUR SERVICES</div>
+    <h1>Digital Solutions That <span class="grad-text">Actually Work</span></h1>
+    <p>Comprehensive services designed for ambitious businesses ready to dominate their market online.</p>
+  </div>
+  <section>
+    <div style="display:grid;gap:70px">
+      <!-- Social Media -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center" class="svc-detail reveal">
+        <div>
+          <div class="section-tag">📱 SOCIAL MEDIA</div>
+          <h2 style="font-size:2rem;margin-bottom:14px">Social Media <span class="grad-text">Growth Engine</span></h2>
+          <p style="color:var(--text2);line-height:1.8;margin-bottom:22px">We craft platform-specific strategies that build real engaged audiences. Every post, hashtag, and campaign is backed by data and designed to convert followers into customers.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px">
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Content Calendar & Strategy Planning</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Reels & Short-Form Video Strategy</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Hashtag Research & Optimization</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Engagement Automation Systems</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Monthly Analytics & Reporting</li>
+          </ul>
+          <button class="btn-primary" onclick="goTo('contact')">Start Growing →</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="glass-card" style="text-align:center"><div style="font-size:2.2rem;margin-bottom:8px">📸</div><div style="font-family:Orbitron,monospace;font-size:1.4rem;font-weight:800;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Instagram</div><div style="color:var(--text3);font-size:.75rem;margin-top:4px">Reels & Growth</div></div>
+          <div class="glass-card" style="text-align:center;margin-top:20px"><div style="font-size:2.2rem;margin-bottom:8px">💼</div><div style="font-family:Orbitron,monospace;font-size:1.4rem;font-weight:800;color:var(--cyan)">LinkedIn</div><div style="color:var(--text3);font-size:.75rem;margin-top:4px">B2B Authority</div></div>
+          <div class="glass-card" style="text-align:center"><div style="font-size:2.2rem;margin-bottom:8px">📘</div><div style="font-family:Orbitron,monospace;font-size:1.4rem;font-weight:800;color:#4facfe">Facebook</div><div style="color:var(--text3);font-size:.75rem;margin-top:4px">Ads & Pages</div></div>
+          <div class="glass-card" style="text-align:center;margin-top:20px"><div style="font-family:Orbitron,monospace;font-size:1.8rem;font-weight:900;color:var(--green)">+300%</div><div style="color:var(--text3);font-size:.75rem;margin-top:6px">Avg Growth</div></div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <!-- Review Automation -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center" class="reveal">
+        <div class="product-mockup">
+          <div class="mockup-bar">
+            <div class="mockup-dot" style="background:#ff5f57"></div>
+            <div class="mockup-dot" style="background:#febc2e"></div>
+            <div class="mockup-dot" style="background:#28c840"></div>
+            <span class="mockup-url">app.dyronyxtech.com/reviews</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="background:rgba(0,229,160,.07);border:1px solid rgba(0,229,160,.15);border-radius:10px;padding:13px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:.82rem;font-weight:600">WhatsApp Review Request</div><div style="font-size:.72rem;color:var(--text3)">Triggered after service</div></div><span style="color:var(--green)">✓ Active</span></div>
+            <div style="background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.12);border-radius:10px;padding:13px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:.82rem;font-weight:600">Email Reminder (Day 3)</div><div style="font-size:.72rem;color:var(--text3)">Automated follow-up</div></div><span style="color:var(--green)">✓ Active</span></div>
+            <div style="background:rgba(91,43,232,.08);border:1px solid rgba(91,43,232,.15);border-radius:10px;padding:13px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:.82rem;font-weight:600">Smart Review Link</div><div style="font-size:.72rem;color:var(--text3)">Unique tracked URL per customer</div></div><span style="color:var(--green)">✓ Active</span></div>
+            <div style="background:rgba(255,179,0,.06);border:1px solid rgba(255,179,0,.12);border-radius:10px;padding:13px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:.82rem;font-weight:600">Negative Feedback Filter</div><div style="font-size:.72rem;color:var(--text3)">Only happy customers go public</div></div><span style="color:var(--green)">✓ Active</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="section-tag">⭐ REPUTATION</div>
+          <h2 style="font-size:2rem;margin-bottom:14px">Google Review <span class="grad-text3">Automation</span></h2>
+          <p style="color:var(--text2);line-height:1.8;margin-bottom:22px">Our intelligent system collects genuine 5-star Google reviews on autopilot — boosting local SEO and building unshakeable trust.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px">
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Automated Sequences (WhatsApp + Email)</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Smart Review Link Generator</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Negative Feedback Interception</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--green);font-weight:700">✓</span>Real-Time Analytics Dashboard</li>
+          </ul>
+          <button class="btn-primary" onclick="goTo('saas')">See Full Platform →</button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <!-- Web Dev -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center" class="reveal">
+        <div>
+          <div class="section-tag">🌐 WEB DEVELOPMENT</div>
+          <h2 style="font-size:2rem;margin-bottom:14px">Websites That <span class="grad-text2">Convert</span></h2>
+          <p style="color:var(--text2);line-height:1.8;margin-bottom:22px">We build fast, beautiful, conversion-optimized websites that rank on Google and turn visitors into customers.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px">
+            <div class="glass-card" style="padding:16px"><div style="font-size:1.1rem;margin-bottom:5px">⚡</div><div style="font-size:.82rem;font-weight:600">Lightning Fast</div><div style="font-size:.75rem;color:var(--text3)">99+ PageSpeed</div></div>
+            <div class="glass-card" style="padding:16px"><div style="font-size:1.1rem;margin-bottom:5px">📱</div><div style="font-size:.82rem;font-weight:600">Mobile First</div><div style="font-size:.75rem;color:var(--text3)">All devices</div></div>
+            <div class="glass-card" style="padding:16px"><div style="font-size:1.1rem;margin-bottom:5px">🔍</div><div style="font-size:.82rem;font-weight:600">SEO Ready</div><div style="font-size:.75rem;color:var(--text3)">Ranks high</div></div>
+            <div class="glass-card" style="padding:16px"><div style="font-size:1.1rem;margin-bottom:5px">🔒</div><div style="font-size:.82rem;font-weight:600">Secure</div><div style="font-size:.75rem;color:var(--text3)">Enterprise-grade</div></div>
+          </div>
+          <button class="btn-primary" onclick="goTo('contact')">Start Your Project →</button>
+        </div>
+        <div>
+          <div class="tech-tags" style="margin-bottom:16px">
+            <span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">Python</span><span class="tech-tag">MongoDB</span><span class="tech-tag">AWS</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:.88rem">Landing Pages</span><span style="color:var(--cyan);font-size:.8rem;font-family:JetBrains Mono,monospace">from ₹15,000</span></div>
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:.88rem">Business Websites</span><span style="color:var(--cyan);font-size:.8rem;font-family:JetBrains Mono,monospace">from ₹25,000</span></div>
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:.88rem">E-Commerce Stores</span><span style="color:var(--cyan);font-size:.8rem;font-family:JetBrains Mono,monospace">from ₹45,000</span></div>
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:.88rem">Custom Web Apps</span><span style="color:var(--cyan);font-size:.8rem;font-family:JetBrains Mono,monospace">from ₹80,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section><div class="cta-banner reveal">
+    <h2>Not Sure Which Service <span class="grad-text">You Need?</span></h2>
+    <p>Book a free 30-minute strategy call. We'll analyze your business and recommend exactly what will move the needle.</p>
+    <div class="cta-btns"><button class="btn-primary" onclick="goTo('contact')">Book Free Strategy Call →</button></div>
+  </div></section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SAAS PRODUCT PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-saas">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">SAAS PRODUCT</div>
+    <h1>Google Review <span class="grad-text">Automation Platform</span></h1>
+    <p>The smartest way to collect, manage and leverage Google reviews for your local business — fully automated.</p>
+  </div>
+  <section>
+    <div class="section-header center reveal">
+      <div class="section-tag">CORE FEATURES</div>
+      <h2 class="section-title">Everything to <span class="grad-text">Own Your Reputation</span></h2>
+    </div>
+    <div class="saas-grid" id="saasFeatures">
+      <div class="saas-feat reveal"><div class="saas-icon">🤖</div><h3>Automated Review Requests</h3><p>Trigger personalized requests automatically when a customer's journey completes — no manual effort required.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">🔗</div><h3>Smart Review Link Generator</h3><p>Generate unique trackable review links per customer. Monitor click rates and conversion in real time.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">💬</div><h3>WhatsApp & Email Reminders</h3><p>Multi-channel reminder sequences that follow up automatically — increase conversion by up to 4x.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">📊</div><h3>Review Analytics Dashboard</h3><p>Track ratings, velocity, response rates, and competitor comparison in one beautiful dashboard.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">🛡️</div><h3>Negative Feedback Management</h3><p>Intelligently intercept negative feedback before it becomes a public review. Handle complaints privately.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">⭐</div><h3>Reputation Management</h3><p>Monitor all review platforms, respond with AI-suggested replies, track your online reputation score.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">👥</div><h3>Customer Feedback System</h3><p>Collect detailed internal feedback separately from public reviews. Use insights to improve service.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">🔌</div><h3>CRM & Tool Integrations</h3><p>Connect with WhatsApp Business, Gmail, Google My Business, and your existing CRM seamlessly.</p></div>
+      <div class="saas-feat reveal"><div class="saas-icon">📱</div><h3>Mobile-Friendly Interface</h3><p>Manage your entire reputation from your phone. Get instant notifications when new reviews arrive.</p></div>
+    </div>
+  </section>
+  <section style="background:linear-gradient(to bottom,rgba(0,212,255,.03),transparent)">
+    <div class="section-header center reveal">
+      <div class="section-tag">HOW IT WORKS</div>
+      <h2 class="section-title">Up and Running in <span class="grad-text">4 Steps</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-icon">⚙️</div><div class="step-num">01</div><h4>Connect Business</h4><p>Link your Google My Business profile and import customer contacts</p></div>
+      <div class="step reveal"><div class="step-icon">📝</div><div class="step-num">02</div><h4>Set Up Campaigns</h4><p>Configure message templates, timing, and request sequences</p></div>
+      <div class="step reveal"><div class="step-icon">🚀</div><div class="step-num">03</div><h4>Launch Automation</h4><p>Hit start and watch automated requests go out on schedule</p></div>
+      <div class="step reveal"><div class="step-icon">📈</div><div class="step-num">04</div><h4>Reviews Roll In</h4><p>Track 5-star reviews piling up automatically in your dashboard</p></div>
+    </div>
+  </section>
+  <section><div class="cta-banner reveal">
+    <h2>Start Collecting Reviews <span class="grad-text">Today</span></h2>
+    <p>Join businesses already dominating local search with our platform.</p>
+    <div class="cta-btns">
+      <button class="btn-primary" onclick="goTo('contact')">Request Demo →</button>
+      <button class="btn-secondary" onclick="goTo('pricing')">See Pricing</button>
+    </div>
+  </div></section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PORTFOLIO PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-portfolio">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">OUR WORK</div>
+    <h1>Projects That <span class="grad-text">Define Excellence</span></h1>
+    <p>Intelligent systems, modern platforms, and growth-focused tools built for real impact.</p>
+  </div>
+  <section>
+    <div class="portfolio-grid">
+      <div class="port-card reveal">
+        <div class="port-preview" style="background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(91,43,232,.15))">🤖</div>
+        <div class="port-body">
+          <h3>AI Customer Support Chatbot</h3>
+          <p>NLP-powered chatbot platform handling customer queries 24/7 with 95% accuracy. Reduced support tickets by 70%.</p>
+          <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">GPT-4</span><span class="tech-tag">React</span><span class="tech-tag">FastAPI</span></div>
+          <div style="font-size:.78rem;color:var(--text3);margin-bottom:12px"><strong style="color:var(--text2)">Problem:</strong> Manual support overwhelm & 24/7 availability</div>
+          <span class="port-link">View Case Study →</span>
+        </div>
+      </div>
+      <div class="port-card reveal">
+        <div class="port-preview" style="background:linear-gradient(135deg,rgba(0,229,160,.15),rgba(0,212,255,.1))">🔒</div>
+        <div class="port-body">
+          <h3>SecureVault — File Protection System</h3>
+          <p>Enterprise-grade encrypted file storage with access controls, audit logs, and end-to-end encryption.</p>
+          <div class="tech-tags"><span class="tech-tag">Node.js</span><span class="tech-tag">AES-256</span><span class="tech-tag">AWS S3</span><span class="tech-tag">PostgreSQL</span></div>
+          <div style="font-size:.78rem;color:var(--text3);margin-bottom:12px"><strong style="color:var(--text2)">Problem:</strong> Insecure file sharing & data breach risks</div>
+          <span class="port-link">View Case Study →</span>
+        </div>
+      </div>
+      <div class="port-card reveal">
+        <div class="port-preview" style="background:linear-gradient(135deg,rgba(224,64,251,.15),rgba(91,43,232,.1))">⭐</div>
+        <div class="port-body">
+          <h3>ReviewFlow — Google Review SaaS</h3>
+          <p>Our flagship product. 200+ businesses using it to collect thousands of 5-star reviews automatically.</p>
+          <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Twilio</span></div>
+          <div style="font-size:.78rem;color:var(--text3);margin-bottom:12px"><strong style="color:var(--text2)">Problem:</strong> Low reviews & poor local SEO ranking</div>
+          <span class="port-link" onclick="goTo('saas')">View Product →</span>
+        </div>
+      </div>
+      <div class="port-card reveal">
+        <div class="port-preview" style="background:linear-gradient(135deg,rgba(255,179,0,.15),rgba(0,229,160,.1))">📊</div>
+        <div class="port-body">
+          <h3>BizDash — Business Analytics Platform</h3>
+          <p>Real-time BI dashboard aggregating sales, social media, reviews, and advertising into one view.</p>
+          <div class="tech-tags"><span class="tech-tag">Next.js</span><span class="tech-tag">D3.js</span><span class="tech-tag">Python</span><span class="tech-tag">Redis</span></div>
+          <div style="font-size:.78rem;color:var(--text3);margin-bottom:12px"><strong style="color:var(--text2)">Problem:</strong> Scattered data, no unified reporting</div>
+          <span class="port-link">View Case Study →</span>
+        </div>
+      </div>
+      <div class="port-card reveal">
+        <div class="port-preview" style="background:linear-gradient(135deg,rgba(91,43,232,.2),rgba(224,64,251,.1))">🛒</div>
+        <div class="port-body">
+          <h3>SwiftShop — E-Commerce Platform</h3>
+          <p>AI-powered e-commerce with product recommendations, WhatsApp ordering — generating ₹50L+ in sales.</p>
+          <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Razorpay</span><span class="tech-tag">Node.js</span><span class="tech-tag">Algolia</span></div>
+          <div style="font-size:.78rem;color:var(--text3);margin-bottom:12px"><strong style="color:var(--text2)">Problem:</strong> Zero online sales channel</div>
+          <span class="port-link">View Case Study →</span>
+        </div>
+      </div>
+      <div class="port-card reveal">
+        <div class="port-preview" style="background:linear-gradient(135deg,rgba(0,212,255,.1),rgba(0,229,160,.15))">⚡</div>
+        <div class="port-body">
+          <h3>AutoLead — Lead Generation Automation</h3>
+          <p>End-to-end lead capture, qualification, and nurturing system integrating LinkedIn, forms, and email.</p>
+          <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Selenium</span><span class="tech-tag">HubSpot</span><span class="tech-tag">Zapier</span></div>
+          <div style="font-size:.78rem;color:var(--text3);margin-bottom:12px"><strong style="color:var(--text2)">Problem:</strong> Manual lead gen eating 40hrs/week</div>
+          <span class="port-link">View Case Study →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section><div class="cta-banner reveal">
+    <h2>Have a Project in <span class="grad-text">Mind?</span></h2>
+    <p>Let's build something remarkable together. Our team is ready.</p>
+    <div class="cta-btns"><button class="btn-primary" onclick="goTo('contact')">Start Your Project →</button></div>
+  </div></section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRICING PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-pricing">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">PRICING</div>
+    <h1>Plans That <span class="grad-text">Grow With You</span></h1>
+    <p>Transparent pricing. No hidden fees. No lock-in contracts. Cancel anytime.</p>
+  </div>
+  <section>
+    <div class="pricing-grid" id="pricingGrid">
+      <div class="price-card reveal">
+        <div class="plan-name">STARTER</div>
+        <div class="plan-desc">For small businesses getting started online</div>
+        <div class="plan-price"><span class="plan-amount">₹4,999</span><span class="plan-period">/month</span></div>
+        <ul class="plan-features">
+          <li><span class="feat-yes">✓</span>Social Media (1 Platform)</li>
+          <li><span class="feat-yes">✓</span>8 Posts Per Month</li>
+          <li><span class="feat-yes">✓</span>Review Automation (Basic)</li>
+          <li><span class="feat-yes">✓</span>50 Review Requests/month</li>
+          <li><span class="feat-yes">✓</span>Monthly Analytics Report</li>
+          <li><span class="feat-yes">✓</span>WhatsApp Support</li>
+          <li><span class="feat-no">—</span><span style="color:var(--text3)">LinkedIn Branding</span></li>
+          <li><span class="feat-no">—</span><span style="color:var(--text3)">Website Development</span></li>
+        </ul>
+        <button class="btn-outline" onclick="goTo('contact')">Get Started</button>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="popular-tag">MOST POPULAR</div>
+        <div class="plan-name">GROWTH</div>
+        <div class="plan-desc">For businesses ready to scale online</div>
+        <div class="plan-price"><span class="plan-amount">₹12,999</span><span class="plan-period">/month</span></div>
+        <ul class="plan-features">
+          <li><span class="feat-yes">✓</span>Instagram + LinkedIn</li>
+          <li><span class="feat-yes">✓</span>20 Posts Per Month</li>
+          <li><span class="feat-yes">✓</span>Review Automation (Advanced)</li>
+          <li><span class="feat-yes">✓</span>300 Review Requests/month</li>
+          <li><span class="feat-yes">✓</span>Bi-Weekly Reports</li>
+          <li><span class="feat-yes">✓</span>Personal Brand Development</li>
+          <li><span class="feat-yes">✓</span>LinkedIn Growth Strategy</li>
+          <li><span class="feat-yes">✓</span>Landing Page Design</li>
+        </ul>
+        <button class="btn-full" onclick="goTo('contact')">Start Growing →</button>
+      </div>
+      <div class="price-card reveal">
+        <div class="plan-name">PRO</div>
+        <div class="plan-desc">Full-service digital growth</div>
+        <div class="plan-price"><span class="plan-amount">₹29,999</span><span class="plan-period">/month</span></div>
+        <ul class="plan-features">
+          <li><span class="feat-yes">✓</span>All Platforms (IG + LI + FB)</li>
+          <li><span class="feat-yes">✓</span>40 Posts Per Month</li>
+          <li><span class="feat-yes">✓</span>Review Automation (Full Suite)</li>
+          <li><span class="feat-yes">✓</span>Unlimited Review Requests</li>
+          <li><span class="feat-yes">✓</span>Weekly Strategy Calls</li>
+          <li><span class="feat-yes">✓</span>Full Personal Brand Package</li>
+          <li><span class="feat-yes">✓</span>Website Design & Development</li>
+          <li><span class="feat-yes">✓</span>Custom Business Automation</li>
+        </ul>
+        <button class="btn-outline" onclick="goTo('contact')">Go Pro</button>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--text3);font-size:.82rem;margin-top:28px;font-family:JetBrains Mono,monospace">Custom enterprise plans available — <span style="color:var(--cyan);cursor:pointer" onclick="goTo('contact')">contact us.</span></p>
+  </section>
+  <section>
+    <div class="section-header center reveal">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Frequently Asked <span class="grad-text">Questions</span></h2>
+    </div>
+    <div class="faq-wrap" id="faqWrap">
+      <div class="faq-item"><div class="faq-q">How long before I see results?<span class="faq-toggle">+</span></div><div class="faq-a">Most clients see measurable results within 30-60 days. Social media growth shows clear trends within 4-6 weeks. Google review numbers improve significantly in the first 2-3 weeks of automation.</div></div>
+      <div class="faq-item"><div class="faq-q">Is there a contract or lock-in?<span class="faq-toggle">+</span></div><div class="faq-a">No lock-in contracts. All plans are month-to-month. We believe in earning your business every single month through results, not paperwork.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I switch plans later?<span class="faq-toggle">+</span></div><div class="faq-a">Absolutely. You can upgrade, downgrade, or cancel anytime. If you upgrade, the difference is prorated for the rest of your billing period.</div></div>
+      <div class="faq-item"><div class="faq-q">How does Google Review automation work?<span class="faq-toggle">+</span></div><div class="faq-a">Our platform sends automated WhatsApp messages and emails to your customers after their service experience, with a direct link to leave a Google review. It also filters negative feedback before it goes public, keeping your rating high.</div></div>
+      <div class="faq-item"><div class="faq-q">Will fake reviews get my account banned?<span class="faq-toggle">+</span></div><div class="faq-a">No. We only request reviews from your real customers — we never use bots, fake accounts, or incentivized reviews. Our system is fully compliant with Google's review policies.</div></div>
+      <div class="faq-item"><div class="faq-q">Do you work with businesses outside Aurangabad?<span class="faq-toggle">+</span></div><div class="faq-a">Yes! We work with businesses across India. Most of our work is done remotely, and we have clients from Mumbai, Pune, Delhi, Nashik, Hyderabad, and beyond.</div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">OUR STORY</div>
+    <h1>Built With <span class="grad-text">Purpose & Passion</span></h1>
+    <p>Not just a digital agency — a growth partner on a mission to help Indian businesses compete and win online.</p>
+  </div>
+  <section>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-tag">MISSION</div>
+        <h2 style="font-size:2rem;margin-bottom:14px">Every Business Deserves to <span class="grad-text">Thrive Online</span></h2>
+        <p style="color:var(--text2);line-height:1.8;margin-bottom:18px">DyronyxTech was founded with a single conviction: that powerful digital tools and growth strategies shouldn't only be accessible to large corporations.</p>
+        <p style="color:var(--text2);line-height:1.8;margin-bottom:18px">We combine cutting-edge technology with deep marketing expertise to help small and medium businesses compete at the highest level — automating the mundane so owners can focus on what they do best.</p>
+        <p style="color:var(--text2);line-height:1.8;margin-bottom:32px">Our vision is to become the most trusted digital growth partner for businesses across India, known for genuine results, transparent processes, and long-term relationships.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="glass-card" style="padding:18px"><div style="font-family:Orbitron,monospace;font-size:1.8rem;font-weight:800;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2021</div><div style="color:var(--text3);font-size:.78rem;font-family:JetBrains Mono,monospace">FOUNDED</div></div>
+          <div class="glass-card" style="padding:18px"><div style="font-family:Orbitron,monospace;font-size:1.8rem;font-weight:800;color:var(--green)">500+</div><div style="color:var(--text3);font-size:.78rem;font-family:JetBrains Mono,monospace">CLIENTS</div></div>
+          <div class="glass-card" style="padding:18px"><div style="font-family:Orbitron,monospace;font-size:1.8rem;font-weight:800;color:var(--cyan)">15+</div><div style="color:var(--text3);font-size:.78rem;font-family:JetBrains Mono,monospace">PRODUCTS BUILT</div></div>
+          <div class="glass-card" style="padding:18px"><div style="font-family:Orbitron,monospace;font-size:1.8rem;font-weight:800;color:var(--pink)">5★</div><div style="color:var(--text3);font-size:.78rem;font-family:JetBrains Mono,monospace">AVG RATING</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="founder-card">
+          <div class="founder-avatar">DK</div>
+          <div class="founder-name">DIKSHA KORE</div>
+          <div class="founder-title">Founder & CEO — DyronyxTech</div>
+          <p class="founder-bio">"I started DyronyxTech because I saw too many brilliant businesses being invisible online. My mission is to arm every business owner with the technology and strategies they need to grow — not just survive, but dominate their market."</p>
+          <p class="founder-bio" style="margin-top:12px">Diksha brings deep expertise in web development, automation engineering, and digital growth strategy. She has personally built AI chatbots, automation systems, and scalable web platforms for clients across industries.</p>
+          <div class="skill-chips">
+            <span class="skill-chip">Web Development</span>
+            <span class="skill-chip">Automation</span>
+            <span class="skill-chip">Digital Growth</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">React</span>
+            <span class="skill-chip">SaaS Products</span>
+            <span class="skill-chip">Social Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:linear-gradient(to bottom,rgba(0,212,255,.03),transparent)">
+    <div class="section-header center reveal">
+      <div class="section-tag">VALUES</div>
+      <h2 class="section-title">What We <span class="grad-text">Stand For</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1000px;margin:0 auto">
+      <div class="saas-feat reveal" style="text-align:center"><div class="saas-icon">🎯</div><h3>Results First</h3><p>We measure everything. If it doesn't move the needle, we change the strategy. Results aren't optional — they're our promise.</p></div>
+      <div class="saas-feat reveal" style="text-align:center"><div class="saas-icon">🔬</div><h3>Data Driven</h3><p>Every decision backed by data. We don't guess — we analyze, test, and optimize until we find what works.</p></div>
+      <div class="saas-feat reveal" style="text-align:center"><div class="saas-icon">🤝</div><h3>True Partnership</h3><p>We're invested in your long-term success. Your growth is our growth. We build relationships, not just deliverables.</p></div>
+      <div class="saas-feat reveal" style="text-align:center"><div class="saas-icon">💡</div><h3>Innovation Always</h3><p>The digital world moves fast. We stay ahead by constantly learning and adopting the latest technologies.</p></div>
+    </div>
+  </section>
+  <section><div class="cta-banner reveal">
+    <h2>Let's Build Something <span class="grad-text">Remarkable</span></h2>
+    <p>Book a call with Diksha to discuss how we can grow your business.</p>
+    <div class="cta-btns"><button class="btn-primary" onclick="goTo('contact')">Schedule a Call →</button></div>
+  </div></section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOG PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-blog">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">KNOWLEDGE HUB</div>
+    <h1>Insights for <span class="grad-text">Digital Growth</span></h1>
+    <p>Expert strategies on social media, automation, SEO, and growing your business online.</p>
+  </div>
+  <section>
+    <div id="blogFeatured" class="reveal" style="margin-bottom:40px"></div>
+    <div class="blog-grid" id="blogGrid"></div>
+    <div style="text-align:center;margin-top:44px">
+      <button class="btn-secondary" style="display:inline-flex" id="loadMoreBtn" onclick="loadMorePosts()">Load More Articles →</button>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-header">
+    <div class="section-tag" style="justify-content:center">CONTACT</div>
+    <h1>Let's <span class="grad-text">Start Building</span></h1>
+    <p>Ready to grow your business? Book a free consultation with Diksha today.</p>
+  </div>
+  <section>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h3>Get in Touch</h3>
+        <p>Whether you're curious about our services, want to discuss a custom project, or are ready to get started — we're here for you.</p>
+        <div class="cinfo-item"><div class="cinfo-icon">✉️</div><div><div class="cinfo-label">EMAIL</div><div class="cinfo-value">hello@dyronyxtech.com</div></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">📱</div><div><div class="cinfo-label">PHONE / WHATSAPP</div><div class="cinfo-value">+91 98765 43210</div></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">📍</div><div><div class="cinfo-label">LOCATION</div><div class="cinfo-value">Aurangabad (Chhatrapati Sambhajinagar), Maharashtra, India</div></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">🕐</div><div><div class="cinfo-label">WORKING HOURS</div><div class="cinfo-value">Mon–Sat: 9 AM – 7 PM IST</div></div></div>
+        <div class="social-row">
+          <a class="social-btn" title="Instagram">📸</a>
+          <a class="social-btn" title="LinkedIn">💼</a>
+          <a class="social-btn" title="Facebook">📘</a>
+          <a class="social-btn" title="WhatsApp">💬</a>
+          <a class="social-btn" title="Twitter">🐦</a>
+        </div>
+        <div class="map-box">
+          <div style="font-size:2rem">🗺️</div>
+          <div style="font-weight:600">Aurangabad, Maharashtra</div>
+          <div style="font-size:.8rem;color:var(--text3)">Chhatrapati Sambhajinagar, India 431001</div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <h3 style="font-size:1.2rem;margin-bottom:6px;font-family:Orbitron,monospace">Send a Message</h3>
+        <p style="color:var(--text3);font-size:.8rem;margin-bottom:24px;font-family:JetBrains Mono,monospace">We respond within 2 business hours.</p>
+        <div class="form-row">
+          <div class="form-group"><label>FIRST NAME</label><input type="text" id="cf-firstname" placeholder="Rahul"></div>
+          <div class="form-group"><label>LAST NAME</label><input type="text" id="cf-lastname" placeholder="Sharma"></div>
+        </div>
+        <div class="form-group"><label>EMAIL ADDRESS</label><input type="email" id="cf-email" placeholder="rahul@yourbusiness.com"></div>
+        <div class="form-group"><label>PHONE / WHATSAPP</label><input type="tel" id="cf-phone" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>SERVICE INTERESTED IN</label>
+          <select id="cf-service">
+            <option value="">Select a service...</option>
+            <option>Social Media Growth</option>
+            <option>Google Review Automation</option>
+            <option>Website Development</option>
+            <option>Personal Brand Development</option>
+            <option>Business Automation</option>
+            <option>Full Digital Presence Package</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group"><label>YOUR GOALS & MESSAGE</label><textarea id="cf-message" placeholder="Share what you're looking to achieve, your current challenges, and any specific requirements..."></textarea></div>
+        <button class="btn-full" id="contactSubmitBtn" onclick="submitContactForm()">Send Message →</button>
+        <div class="form-msg" id="contactFormMsg"></div>
+        <p style="text-align:center;color:var(--text3);font-size:.72rem;margin-top:12px;font-family:JetBrains Mono,monospace">🔒 Your information is secure and will never be shared.</p>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="section-header center reveal">
+      <div class="section-tag">SOCIAL PROOF</div>
+      <h2 class="section-title">Join Our <span class="grad-text">Happy Clients</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-text">"Diksha is incredibly talented and dedicated. She built our entire web platform from scratch and results exceeded every expectation."</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</div><div><div class="testi-name">Suresh Patil</div><div class="testi-role">MD, Patil Industries — Aurangabad</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-text">"LinkedIn engagement went up 400% in 3 months. DyronyxTech knows exactly what they're doing when it comes to professional branding."</p><div class="testi-author"><div class="testi-avatar" style="background:var(--grad3)">N</div><div><div class="testi-name">Neha Waghmare</div><div class="testi-role">Founder, HR Consulting — Pune</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-text">"Google profile went from 15 reviews to 320+ in 2 months. New customer inquiries have tripled. Absolutely worth every rupee."</p><div class="testi-author"><div class="testi-avatar" style="background:var(--grad2)">V</div><div><div class="testi-name">Vijay Kulkarni</div><div class="testi-role">Owner, VK Auto Works — Nashik</div></div></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="nav-logo" style="margin-bottom:12px" onclick="goTo('home')">
+        <img src="" alt="DyronyxTech" style="width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(0,212,255,.4))" id="footerLogo">
+        <span class="nav-logo-text">DYRONYXTECH</span>
+      </div>
+      <p>Helping businesses across India grow online through smart automation, modern web technology, and data-driven digital strategies.</p>
+    </div>
+    <div>
+      <h4>SERVICES</h4>
+      <ul class="footer-links">
+        <li><a onclick="goTo('services')">Social Media Growth</a></li>
+        <li><a onclick="goTo('saas')">Review Automation</a></li>
+        <li><a onclick="goTo('services')">Website Development</a></li>
+        <li><a onclick="goTo('services')">Personal Branding</a></li>
+        <li><a onclick="goTo('services')">Business Automation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>COMPANY</h4>
+      <ul class="footer-links">
+        <li><a onclick="goTo('about')">About Us</a></li>
+        <li><a onclick="goTo('portfolio')">Portfolio</a></li>
+        <li><a onclick="goTo('blog')">Blog</a></li>
+        <li><a onclick="goTo('pricing')">Pricing</a></li>
+        <li><a onclick="goTo('contact')">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONTACT</h4>
+      <ul class="footer-links">
+        <li><a>hello@dyronyxtech.com</a></li>
+        <li><a>+91 98765 43210</a></li>
+        <li><a>Nagpur, Maharashtra</a></li>
+        <li><a>Mon–Sat 9AM–7PM IST</a></li>
+      </ul>
+      <!-- Newsletter -->
+      <div style="margin-top:20px">
+        <div style="font-family:Orbitron,monospace;font-size:.8rem;font-weight:700;margin-bottom:8px;color:var(--text)">NEWSLETTER</div>
+        <div style="display:flex;gap:8px">
+          <input type="email" id="nlEmail" placeholder="your@email.com" style="flex:1;background:rgba(0,212,255,.04);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-size:.82rem;font-family:Exo 2,sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--border)'">
+          <button onclick="subscribeNewsletter()" style="background:var(--grad1);color:#000;font-weight:700;font-size:.78rem;padding:9px 14px;border-radius:8px;border:none;font-family:Exo 2,sans-serif;white-space:nowrap">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 DyronyxTech · Founded by Diksha Kore · All rights reserved.</div>
+    <div class="footer-nav">
+      <a>Privacy Policy</a>
+      <a>Terms of Service</a>
+      <a>Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Separated JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
